@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Conway's Game of Life",
+  "description": "A fully-featured Game of Life simulation with customizable settings, overlays, and file options.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "conway16.png",
+      "48": "conway48.png",
+      "128": "conway128.png"
+    }
+  },
+  "icons": {
+    "16": "conway16.png",
+    "48": "conway48.png",
+    "128": "conway128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "content.js" ],
+      "css": [ "content.css" ]
+    }
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}

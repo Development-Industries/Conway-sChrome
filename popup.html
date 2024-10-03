@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- Toolbar with buttons -->
+        <div id="toolbar">
+            <img id="play-button" src="play.png" alt="Play">
+            <img id="pause-button" src="pause.png" alt="Pause">
+            <img id="next-button" src="next.png" alt="Next">
+            <img id="clear-button" src="clear.png" alt="Clear">
+        </div>
+
+        <!-- Settings -->
+        <div id="settings">
+            <label for="rows-input">Rows:</label>
+            <input type="number" id="rows-input" value="15" min="5">
+
+            <label for="cols-input">Columns:</label>
+            <input type="number" id="cols-input" value="15" min="5">
+
+            <button id="apply-settings">Apply Settings</button>
+        </div>
+
+        <!-- Game board (grid) -->
+        <div id="game-board"></div>
+
+        <!-- Heads-Up Display (HUD) -->
+        <div id="hud">
+            <p>Generations: <span id="generation-count">0</span></p>
+            <p>Living Cells: <span id="living-cells-count">0</span></p>
+            <p>Boundary: <span id="boundary-type">Finite</span></p>
+            <p>Grid Size: <span id="grid-size">15 x 15</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
